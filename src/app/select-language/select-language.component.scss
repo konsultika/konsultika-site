@@ -1,0 +1,6 @@
+@import '../../assets/styles/mixins';
+
+:host{
+    @include align-self(flex-end);
+    margin: 10px 10px;
+}

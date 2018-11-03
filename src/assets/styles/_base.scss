@@ -1,0 +1,66 @@
+@import 'mixins';
+
+body {
+  margin: 0;
+  font-family: Brother-1816-Medium;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Brother-1816-Light;
+  font-weight: normal;
+  font-style: normal;
+  color: #FFA300;
+}
+
+a {
+  color: #FFA300;
+}
+
+div {
+  @include flexbox;
+  @include flex(0 1 auto);
+}
+
+.ingress {
+  font-family: Brother-1816-Light-Italic;
+}
+
+.medium {
+  font-family: Brother-1816-Medium-Italic;
+}
+
+.container {
+  @include flex-direction(column);
+  @include flex(0 1 100%);
+
+  @include media('>desktop') {
+    max-width: 1024px;
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  margin: 0 20px;
+
+  &--menu {
+    margin-top: 59px;
+    margin-bottom: 59px;
+    @include justify-content(space-between);
+  }
+}
+
+footer {
+  @include flexbox;
+  @include justify-content(flex-end);
+  @include flex-direction(column);
+  @include flex(0 1 100%);
+  margin-bottom: 10px;
+}
+
+.outline {
+  color: #FFA300;
+}

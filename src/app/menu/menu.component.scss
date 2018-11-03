@@ -1,0 +1,36 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mixins';
+
+.menu {
+  @include flexbox;
+  @include justify-content(flex-end);
+  color: $konsultika-blue;
+
+  &__content {
+    display: none;
+    font-size: 28px;
+
+    &--is-active {
+      display: inherit;
+      position: absolute;
+      background-color: rgba(white, 0.8);
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      top: 0;
+      left: 0;
+    }
+
+    a {
+      color: $konsultika-blue;
+    }
+  }
+
+  &__items {
+    flex-direction: column;
+  }
+}
+
+app-hamburger {
+  z-index: 2;
+}

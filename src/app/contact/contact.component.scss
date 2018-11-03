@@ -1,0 +1,19 @@
+@import '../../assets/styles/mixins';
+
+.contact {
+  @include flex-direction(column);
+
+  &__details {
+    @include flex-direction(column);
+    margin-bottom: 20px;
+  }
+
+  &__address {
+    @include flex-direction(column);
+    margin-bottom: 20px;
+  }
+
+  &__social {
+    @include flex-direction(column);
+  }
+}
