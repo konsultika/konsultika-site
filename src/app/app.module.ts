@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { CustomersComponent } from './customers/customers.component';
+import { CookiesComponent } from './cookies/cookies.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -23,6 +24,7 @@ const appRoutes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'customers', component: CustomersComponent },
+  { path: 'cookies', component: CookiesComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
     ContactComponent,
     HomeComponent,
     ServicesComponent,
-    CustomersComponent
+    CustomersComponent,
+    CookiesComponent
   ],
   imports: [
     BrowserModule,

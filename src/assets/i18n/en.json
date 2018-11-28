@@ -6,5 +6,11 @@
   "servicesIntro": "We specialize in development of Internet and Intranet portals. The focus on the quality in what we do stands very strong, both in technology, UX and design.",
   "technologiesAndFrameworks": "Technologies and frameworks",
   "customers": "Customers",
-  "norwegianDescription": "Norwegian is the third largest low-cost carrier in Europe and the largest airline in Scandinavia. Konsultika helps maintaining and developing Norwegian's Internet portal og booking solution."
+  "norwegianDescription": "Norwegian is the third largest low-cost carrier in Europe and the largest airline in Scandinavia. Konsultika helps maintaining and developing Norwegian's Internet portal og booking solution.",
+  "cookieConsentMessage": "This website uses cookies to ensure you get the best experience on our website.",
+  "cookieConsentDismiss": "Got it!",
+  "cookieConsentLink": "Learn more",
+  "cookieConsentTitle": "Use of cookies",
+  "cookieConsentIntro": "Our websites, www.konsultika.com and www.konsultika.no use cookies. A cookie is a small data file sent from our website and is stored on your computer.",
+  "cookieConsentBody": "<p>If you choose not to turn off cookies in your browser and continue to use Konsultika's website, you are consenting to our use of cookies in accordance with this cookie policy, as well as to how we process your personal data. You can, at any time, refuse to allow cookies by changing your choice and adjusting your browser settings.</p><h2>How Konsultika is using cookies</h2><p>Konsultika uses cookies only when necessary. We use cookies to maintain statistics regarding our website. Konsultika uses third party cookies, such as Google Analytics, which is a statistics tool for evaluating user behavior. We do this to optimize the user experience and maintain statistics regarding our website. If you consent to our cookie policy, we will also start registering information about you.</p>"
 }
