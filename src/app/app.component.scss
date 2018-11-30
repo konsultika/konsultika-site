@@ -13,6 +13,9 @@
     background-size: contain;
     height: 130px;
     margin-bottom: 20px;
+    &-wrapper {
+        height: 210px;
+    }
 }
 
 h1 {
@@ -25,23 +28,28 @@ p {
 }
 
 .cookie-consent {
-  position: absolute;
-  z-index: 100;
-  bottom: 0;
-  background-color: $konsultika-blue;
-  width: calc(100% - 40px);
-  left: 0;
-  padding: 20px;
-  justify-content: center;
-
-  &__message{
-    margin-right: 30px;
-    display: block;
-  }
-
-  &__button{
-    align-self: center;
-  }
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    background-color: $konsultika-blue;
+    width: calc(100% - 40px);
+    left: 0;
+    padding: 20px;
+    justify-content: center;
+    border-top: 1px solid;
+    flex-wrap: wrap;
+    &__message {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        @include media('>=tablet') {
+            margin-right: 30px;
+            margin-bottom: 30px;
+        }
+        display: block;
+    }
+    &__button {
+        align-self: center;
+    }
 }
 
 @include media('>=tablet') {

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 declare const window;
 
@@ -11,8 +12,9 @@ declare const window;
 export class AppComponent implements OnInit {
 
   displayCookieConsent = true;
+  bodyClass = 'body';
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -28,6 +30,16 @@ export class AppComponent implements OnInit {
 
     const cookieConsent = localStorage.getItem('disable-cookie-consent');
     this.displayCookieConsent = !cookieConsent || cookieConsent !== 'true';
+
+    this.router.events.subscribe((x: NavigationEnd) => {
+      if (x.urlAfterRedirects) {
+        if (x.urlAfterRedirects === '/home') {
+          this.bodyClass = 'container';
+        } else {
+          this.bodyClass = 'body';
+        }
+      }
+    });
   }
 
   onCookieConsentDismis() {

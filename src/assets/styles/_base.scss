@@ -17,9 +17,9 @@ h5 {
     color: $konsultika-orange;
 }
 
-.intro{
-  font-family: Brother-1816-Light;
-  font-size: 18px;
+.intro {
+    font-family: Brother-1816-Light;
+    font-size: 18px;
 }
 
 a {
@@ -42,7 +42,6 @@ button {
     transition: all 0.5s;
     position: relative;
     font-size: 16px;
-    width: 150px;
     &:hover {
         transition: all 0.5s;
         position: relative;
@@ -64,7 +63,6 @@ button {
 
 .container {
     @include flex-direction(column);
-    @include flex(0 1 100%);
     @include media('>desktop') {
         max-width: 1024px;
         width: 1024px;
@@ -88,4 +86,21 @@ footer {
 
 .outline {
     color: #FFA300;
+}
+
+.body {
+    padding: 0 20px;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    background-color: $konsultika-blue;
+    border-top: 1px solid;
+    height: 100%;
+    &>* {
+        @include media('>desktop') {
+            max-width: 1024px;
+            width: 1024px;
+            margin: 0 auto;
+        }
+    }
 }

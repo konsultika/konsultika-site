@@ -1,12 +1,14 @@
 <app-menu></app-menu>
 <div class="container">
-  <a routerLink="/">
+  <a class="logo-wrapper" routerLink="/">
     <div class="logo"></div>
   </a>
-  <router-outlet></router-outlet>
   <div class="cookie-consent" *ngIf="displayCookieConsent">
     <div class="cookie-consent__message"><span>{{'cookieConsentMessage' | translate}}</span>&nbsp;&nbsp;<a routerLink="/cookies">{{'cookieConsentLink'
         | translate}}</a></div>
     <button class="cookie-consent__button" (click)="onCookieConsentDismis()">{{'cookieConsentDismiss' | translate}}</button>
   </div>
+</div>
+<div [ngClass]="bodyClass">
+  <router-outlet></router-outlet>
 </div>
