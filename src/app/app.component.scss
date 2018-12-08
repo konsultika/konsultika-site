@@ -2,13 +2,14 @@
 :host {
     @include flexbox;
     @include flex-direction(column);
-    background: linear-gradient(rgba(8, 32, 61, 0.918), rgba(0, 0, 0, 0.137)), url('/assets/images/background.jpeg') center;
+    background: linear-gradient(rgba(158, 166, 175, 0.9), rgba(0, 0, 0, 0.1)), url('/assets/images/background1.jpg') center;
+    background-blend-mode: hard-light;
     background-size: cover;
     height: 100vh;
 }
 
 .logo {
-    background: url('/assets/images/logo_neg.svg') no-repeat;
+    background: url('/assets/images/logo_pos.svg') no-repeat;
     background-position: center;
     background-size: contain;
     height: 130px;
