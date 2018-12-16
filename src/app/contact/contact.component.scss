@@ -1,5 +1,10 @@
 @import '../../assets/styles/mixins';
 
+:host {
+  position: absolute;
+  width: calc(100% - 40px);
+}
+
 .contact {
   @include flex-direction(column);
 

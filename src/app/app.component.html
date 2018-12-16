@@ -9,6 +9,6 @@
     <button class="cookie-consent__button" (click)="onCookieConsentDismis()">{{'cookieConsentDismiss' | translate}}</button>
   </div>
 </div>
-<div [ngClass]="bodyClass">
-  <router-outlet></router-outlet>
+<div [ngClass]="bodyClass" [@animRoutes]="getPage(appOutlet)">
+  <router-outlet #appOutlet="outlet"></router-outlet>
 </div>

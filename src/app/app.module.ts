@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { SelectLanguageComponent } from './select-language/select-language.component';
@@ -20,12 +21,12 @@ export function createTranslateLoader(http: HttpClient) {
 }
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'customers', component: CustomersComponent },
-  { path: 'cookies', component: CookiesComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' }
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, data: { page: 'home' } },
+  { path: 'contact', component: ContactComponent, data: { page: 'contact' } },
+  { path: 'services', component: ServicesComponent, data: { page: 'services' } },
+  { path: 'customers', component: CustomersComponent, data: { page: 'customers' } },
+  { path: 'cookies', component: CookiesComponent, data: { page: 'cookies' } }
 ];
 
 @NgModule({
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
-    })
+    }),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
