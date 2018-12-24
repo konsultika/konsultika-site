@@ -36,19 +36,17 @@ declare const window;
     trigger('animRoutes', [
       transition('* <=> *', [
         group([
-          style({ left: '-100%' }),
+          style({ opacity: 0 }),
           query(
             ':enter',
             [
               style({
-                opacity: 0,
-                left: '-100%'
+                opacity: 0
               }),
               animate(
-                '300ms ease-out',
+                '700ms linear',
                 style({
-                  opacity: 1,
-                  left: '0%',
+                  opacity: 1
                 })
               ),
               animateChild()
@@ -57,10 +55,9 @@ declare const window;
           ),
           query(
             ':leave',
-            [animate('300ms ease-out',
+            [animate('700ms linear',
               style(
                 {
-                  left: '100%',
                   opacity: 0
                 }
               )), animateChild()],

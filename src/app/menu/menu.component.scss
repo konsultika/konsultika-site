@@ -1,38 +1,43 @@
 @import '../../assets/styles/variables';
 @import '../../assets/styles/mixins';
+
 .menu {
-    @include flexbox;
-    @include justify-content(flex-end);
-    color: $konsultika-blue;
-    &__content {
-        display: none;
-        font-size: 28px;
-        &--is-active {
-            z-index: 2;
-            display: inherit;
-            position: absolute;
-            background-color: rgba(white, 0.8);
-            width: 100%;
-            opacity: 1;
-            top: 0;
-            left: 0;
-        }
-        a {
-            color: $konsultika-blue;
-        }
+  @include flexbox;
+  @include justify-content(flex-end);
+  color: $konsultika-blue;
+
+  &__content {
+    display: none;
+    font-size: 28px;
+
+    &--is-active {
+      z-index: 2;
+      display: inherit;
+      position: absolute;
+      background-color: rgba(white, 0.9);
+      width: 100%;
+      opacity: 1;
+      top: 0;
+      left: 0;
     }
-    &__items {
-        flex-direction: column;
+
+    a {
+      color: $konsultika-blue;
     }
+  }
+
+  &__items {
+    flex-direction: column;
+  }
 }
 
 app-hamburger {
-    z-index: 3;
+  z-index: 3;
 }
 
 .backdrop {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    cursor: pointer;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
 }

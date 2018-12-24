@@ -1,6 +1,6 @@
 <div class="menu">
   <app-hamburger [(isActive)]="isActive"></app-hamburger>
-  <div class="menu__content" [class.menu__content--is-active]="isActive">
+  <div [@slideInOut]="animationState" class="menu__content" [class.menu__content--is-active]="isActive">
     <div class="container container--menu">
       <div class="menu__items">
         <a routerLink="/services" routerLinkActive="active" (click)="isActive = false">{{'services' | translate}}</a>
